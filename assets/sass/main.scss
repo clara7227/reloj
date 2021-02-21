@@ -1,0 +1,139 @@
+@import 'lib/vars';
+@import 'lib/mixins';
+@import 'lib/reboot';
+@import 'lib/fontawesome/font-awesome';
+@import 'lib/fontface';
+@import 'lib/keyframes';
+
+  $color-hora:rgb(255, 255, 255);
+  $color-sombra-texto: rgba(0, 0, 0,0.2);
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.6fr;
+  grid-template-rows: 4fr 1fr 5fr;
+  height: 650px;
+  position: absolute;
+  z-index: 1;
+  width: 1350px;
+}
+
+.clock-container {
+  grid-area: 2 / 2 / 3 / 3;
+  font-family: "Montserrat";
+  text-align: left;
+}
+
+.hour {
+  text-align: center;
+  color: $color-hora;
+  text-shadow: 1px 2px 6px $color-sombra-texto;
+  display: flex;
+  .hour-big {
+    font-size: 3.2em;
+    display: flex;
+    padding-left: 0.7em;
+  }
+  .hour-small {
+    margin:0.4em 0 0 0.3em;
+    font-size: 1.5em;
+    display: flex;
+  }
+}
+
+.date {
+  text-align: center;
+  color: $color-hora;
+  font-size: 0.65em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12em 0 4em;
+  margin:-0.7em;
+  letter-spacing: 0.26em;
+  text-shadow: 1px 2px 6px $color-sombra-texto;
+
+  .day-date {
+    font-weight: bold;
+ 
+  }
+}
+
+.sky-background {
+  position: absolute;
+  height: 650px;
+  width: 1350px;
+  z-index: 0;
+}
+.dawn {
+  background: (linear-gradient(#033777, #fcd060,));
+  transition: 300s ease-in;
+}
+.day {
+  background: (linear-gradient(#d5ebff, #0065e1));
+  transition: 300s ease-in;
+}
+.sunset {
+  background: (linear-gradient(#2e6392,#e14300, #f2d843,));
+  transition: 300s ease-in;
+}
+.twilight {
+  background: (linear-gradient(#2439b0, #9d8dd7,));
+  transition: 36000s ease-in;
+}
+.night {
+  background: (linear-gradient(#020410, #233b78,));
+  transition: 3000 ease-in;
+}
+/*ASTROS*/
+.astro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 465px;
+  width: 1256px;
+}
+.sol {
+  background: rgb(255, 211, 79);
+  box-shadow:  0px 0px 10px  rgb(255, 211, 79);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+.sol-rojo {
+  background: rgb(186, 8, 8);
+  box-shadow:  0px 0px 10px rgb(186, 8, 8);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.luna {
+  width: 20px;
+  height: 20px;
+  background-image: url("img/luna.svg");
+  background-repeat: no-repeat;
+  /*box-shadow: 0px 0px 18px rgb(255, 255, 255);*/
+}
+.sol-mitad {
+  background: rgb(255, 143, 58);
+  border-top-left-radius: 110px;  /* 100px of height + 10px of border */
+  border-top-right-radius: 110px; /* 100px of height + 10px of border */
+  box-shadow:  0px 0px 10px rgb(255, 143, 58);
+    width: 20px;
+    height: 10px;
+
+}
+/*CANVAS CLOCK*/
+.canvas-container {
+  display: flex;
+  justify-content: center;
+}
+#canvas {
+  height: 400px;
+  width: 400px;
+  margin: 6.3em 0 0 -6.3em;
+  position: relative;
+  z-index: 1;
+}

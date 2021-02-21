@@ -1,0 +1,9 @@
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135.3 146.31">
+<defs>
+<style>.cls-1{fill:#f3f1e7;}</style>
+<filter id="f3" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceAlpha" dx="20" dy="20" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+</defs><title>luna</title><path class="cls-1" d="M328.07,332.28a75,75,0,0,1-60.3-119.59,75,75,0,1,0,83.53,115.9A74.69,74.69,0,0,1,328.07,332.28Z" transform="translate(-216 -212.69)"/></svg>
