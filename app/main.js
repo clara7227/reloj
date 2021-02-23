@@ -33,15 +33,15 @@ let displayClock = () => {
         timeOfDay = `night`
         astro = "luna"
         console.log(`night`)
-    } else if ( 20 >= hours && hours > 18){
+    } else if ( 20 > hours && hours > 18){
         timeOfDay = `sunset`
         astro = "sol-rojo"
         console.log(`sunset`)
-    } else if ( 21 > hours && hours > 20){
+    } else if ( 21 > hours && hours >= 20){
         timeOfDay = `twilight`
         astro = "sol-mitad"
         console.log(`twilight`)
-    } else if (9 > hours && hours >= 6 ) {
+    } else if (9 >= hours && hours >= 6 ) {
         timeOfDay = `dawn`
         astro = "sol-mitad"
         console.log(`dawn`)
